@@ -1,0 +1,62 @@
+body{
+	margin: 0;
+}
+
+@font-face{
+	font-family: 'Myfont';
+	src: url("../font/cinecaption226.ttf");
+}
+
+.logo{
+	font-family: Myfont;
+}
+
+.header{
+	margin: 10px;
+	height: 100px;
+	background-color: black;
+	background-size: cover;
+	background-position: top;
+	color: #fff;
+}
+
+.overlay{
+	justify-content: center;
+    align-items: center;
+}
+
+.headercontent{
+	font-size: 50px;
+    text-align: center;
+    line-height: 100px;
+}
+
+
+
+.container{
+	margin: 10px;
+	height: 600px;
+	background-color: #F2F2F2;
+}
+
+.block-page{
+	display: flex;
+}
+
+.block-graph{
+	flex-grow: 1;
+	margin: 10px;
+	width: 100%;
+}
+
+.block-graph img {
+  object-fit: cover;
+  width: 100%;
+  height: 100%
+}
+
+.block-log{
+	flex-grow: 1;
+	margin: 10px;
+	width: 100%;
+}
