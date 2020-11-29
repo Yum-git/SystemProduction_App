@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>管理者ページみたいな感じ</title>
+    <link rel="stylesheet" href="static/css/main.css">
+</head>
+<body>
+    <div class="header">
+        <div class="overlay">
+            <div class="headercontent">
+                <label class="logo">WAF Management Page</label>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        <div class="block-page">
+            <div class="block-graph">
+                <img src="static/png/sample.png">
+            </div>
+            <div class="block-log">
+                {% for i in logs %}
+                <div class="log-detail">
+                    {{ i }}
+                </div>
+                {% endfor %}
+
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+
+    </div>
+</body>
+</html>
