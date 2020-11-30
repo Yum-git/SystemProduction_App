@@ -7,7 +7,7 @@ body{
 /*フォント関係*/
 @font-face{
 	font-family: 'Myfont';
-	src: url("../font/cinecaption226.ttf");
+	src: url("../font/uzura.ttf");
 }
 
 .logo{
@@ -19,10 +19,10 @@ body{
 .header{
 	margin: 10px;
 	height: 100px;
-	background-color: black;
+	background-color: white;
 	background-size: cover;
 	background-position: top;
-	color: #fff;
+	color: black;
 }
 
 .overlay{
@@ -61,8 +61,8 @@ body{
 
 .block-graph img {
   	object-fit: cover;
-  	width: 35vw;
-  	height: 35vw;
+  	width: 80%;
+  	height: 80%;
 }
 
 .block-log{
@@ -78,16 +78,32 @@ body{
 
 /*setting-page内処理関連*/
 .setting-page{
+	font-family: Myfont;
 	border: solid 1px;
 	display: flex;
 	margin: 10px;
-	height: 600px;
-	background-color: #f2f2f2;
+	background-color: deepskyblue;
 }
 
 .setting-detail{
-	margin: 10px;
+	border-radius: 8px;
+	margin: 20px;
+	padding: 10px;
 	border: solid 1px;
-	flex-grow: 1;
+	width: 100%;
+	background-color: #F2F2F2;
+}
+
+.setting-detail-dropdown{
+	text-align: center;
+}
+
+/*footer*/
+.footer{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	height: 60px;
 }
 
