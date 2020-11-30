@@ -16,15 +16,61 @@
     <div class="container">
         <div class="block-page">
             <div class="block-graph">
+                <div class="block-graph-title">
+                    <h2>
+                        Block Graph
+                    </h2>
+                </div>
                 <img src="static/png/sample.png">
             </div>
             <div class="block-log">
+                <div class="title-center">
+                    <h2>
+                        Block logs
+                    </h2>
+                </div>
                 {% for i in logs %}
                 <div class="log-detail">
                     {{ i }}
                 </div>
                 {% endfor %}
-
+            </div>
+        </div>
+        <div class="setting-page">
+            <div class="setting-detail">
+                <div class="title-center">
+                    <h2>
+                        SQL
+                    </h2>
+                </div>
+            </div>
+            <div class="setting-detail">
+                <div class="title-center">
+                    <h2>
+                        RFI
+                    </h2>
+                </div>
+            </div>
+            <div class="setting-detail">
+                <div class="title-center">
+                    <h2>
+                        TRAVERSAL
+                    </h2>
+                </div>
+            </div>
+            <div class="setting-detail">
+                <div class="title-center">
+                    <h2>
+                        EVADE
+                    </h2>
+                </div>
+            </div>
+            <div class="setting-detail">
+                <div class="title-center">
+                    <h2>
+                        XSS
+                    </h2>
+                </div>
             </div>
         </div>
     </div>

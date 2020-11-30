@@ -1,7 +1,10 @@
+/*bodyタグ*/
 body{
 	margin: 0;
 }
 
+
+/*フォント関係*/
 @font-face{
 	font-family: 'Myfont';
 	src: url("../font/cinecaption226.ttf");
@@ -11,6 +14,8 @@ body{
 	font-family: Myfont;
 }
 
+
+/*header関連*/
 .header{
 	margin: 10px;
 	height: 100px;
@@ -33,26 +38,31 @@ body{
 
 
 
+/*container関連*/
 .container{
 	margin: 10px;
-	height: 600px;
-	background-color: #F2F2F2;
 }
 
+
+/*block-page内処理関連*/
 .block-page{
+	border: solid 1px;
 	display: flex;
+	margin: 10px;
+	background-color: #F2F2F2;
 }
 
 .block-graph{
 	flex-grow: 1;
 	margin: 10px;
 	width: 100%;
+	text-align: center;
 }
 
 .block-graph img {
-  object-fit: cover;
-  width: 100%;
-  height: 100%
+  	object-fit: cover;
+  	width: 35vw;
+  	height: 35vw;
 }
 
 .block-log{
@@ -60,3 +70,24 @@ body{
 	margin: 10px;
 	width: 100%;
 }
+
+.title-center{
+	text-align: center;
+}
+
+
+/*setting-page内処理関連*/
+.setting-page{
+	border: solid 1px;
+	display: flex;
+	margin: 10px;
+	height: 600px;
+	background-color: #f2f2f2;
+}
+
+.setting-detail{
+	margin: 10px;
+	border: solid 1px;
+	flex-grow: 1;
+}
+
