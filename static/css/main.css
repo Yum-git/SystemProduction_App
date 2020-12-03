@@ -98,6 +98,10 @@ body{
 	text-align: center;
 }
 
+.select-in{
+	margin: 10px;
+}
+
 /*footer*/
 .footer{
 	display: flex;

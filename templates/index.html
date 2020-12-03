@@ -37,15 +37,19 @@
             </div>
         </div>
         <div class="setting-page">
+            {% for status in status_all %}
             <div class="setting-detail">
                 <div class="title-center">
                     <h2>
-                        SQL
+                        {{ status[0] }}
                     </h2>
+                    <h4>
+                        状態：{{ status[1] }}
+                    </h4>
                 </div>
                 <div class="setting-detail-dropdown">
-                    <form>
-                        <select name="value" class="select-in">
+                    <form action="/api" method="post">
+                        <select name="{{ status[0].lower() }}" class="select-in">
                             <option value="very_hard">とてもきつい</option>
                             <option value="hard">きつい</option>
                             <option value="soft">ゆるい</option>
@@ -56,66 +60,7 @@
                     </form>
                 </div>
             </div>
-            <div class="setting-detail">
-                <div class="title-center">
-                    <h2>
-                        RFI
-                    </h2>
-                </div>
-                <div class="setting-detail-dropdown">
-                    <select name="value">
-                        <option value="very_hard">とてもきつい</option>
-                        <option value="hard">きつい</option>
-                        <option value="soft">ゆるい</option>
-                        <option value="very_soft">とてもゆるい</option>
-                    </select>
-                </div>
-            </div>
-            <div class="setting-detail">
-                <div class="title-center">
-                    <h2>
-                        TRAVERSAL
-                    </h2>
-                </div>
-                <div class="setting-detail-dropdown">
-                    <select name="value">
-                        <option value="very_hard">とてもきつい</option>
-                        <option value="hard">きつい</option>
-                        <option value="soft">ゆるい</option>
-                        <option value="very_soft">とてもゆるい</option>
-                    </select>
-                </div>
-            </div>
-            <div class="setting-detail">
-                <div class="title-center">
-                    <h2>
-                        EVADE
-                    </h2>
-                </div>
-                <div class="setting-detail-dropdown">
-                    <select name="value">
-                        <option value="very_hard">とてもきつい</option>
-                        <option value="hard">きつい</option>
-                        <option value="soft">ゆるい</option>
-                        <option value="very_soft">とてもゆるい</option>
-                    </select>
-                </div>
-            </div>
-            <div class="setting-detail">
-                <div class="title-center">
-                    <h2>
-                        XSS
-                    </h2>
-                </div>
-                <div class="setting-detail-dropdown">
-                    <select name="value">
-                        <option value="very_hard">とてもきつい</option>
-                        <option value="hard">きつい</option>
-                        <option value="soft">ゆるい</option>
-                        <option value="very_soft">とてもゆるい</option>
-                    </select>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <div class="footer">
