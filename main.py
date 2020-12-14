@@ -6,13 +6,14 @@ app = Flask(__name__)
 @app.route("/")
 def index():
     logs = ['20201123 : saoshoahsoa', '20201123 : ahara is xss ']
-    status_all = [['SQL', 'カスタム'], ['RFI', 'とてもきつい'], ['TRAVERSAL', 'きつい'], ['EVADE', 'ゆるい'], ['XSS', 'とてもゆるい']]
+    status_all = [['SQL', 'custom'], ['RFI', 'very_hard'], ['TRAVERSAL', 'hard'], ['EVADE', 'soft'], ['XSS', 'very_soft']]
 
     return render_template("index.html", logs=logs, status_all=status_all)
 
 
 @app.route("/api")
 def api():
+
     return 'a'
 
 
