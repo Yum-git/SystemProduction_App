@@ -59,10 +59,18 @@ body{
 	text-align: center;
 }
 
+.block-graph-title{
+	font-family: Myfont;
+}
+
 .block-graph img {
   	object-fit: cover;
   	width: 80%;
-  	height: 80%;
+}
+
+.log-box{
+	overflow: scroll;
+	height: 300px;
 }
 
 .block-log{
@@ -72,6 +80,7 @@ body{
 }
 
 .title-center{
+	font-family: Myfont;
 	text-align: center;
 }
 
@@ -101,6 +110,7 @@ body{
 }
 
 .setting-detail .title-center{
+	font-family: Myfont;
 	text-align: center;
 	width: 100%;
 	top: 0;

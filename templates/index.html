@@ -29,11 +29,13 @@
                         Block logs
                     </h2>
                 </div>
-                {% for i in logs %}
-                <div class="log-detail">
-                    {{ i }}
+                <div class="log-box">
+                    {% for i in logs %}
+                    <div class="log-detail">
+                        {{ i }}
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
         <div class="setting-page">
@@ -43,30 +45,18 @@
                     <h2>
                         {{ status[0] }}
                     </h2>
-                    <!--
-                    <h4>
-                        状態：{{ status[1] }}
-                    </h4>
-                    -->
                 </div>
                 <div class="setting-detail-dropdown">
                     <form action="/api" method="post">
-                        <select name="{{ status[0].lower() }}" class="select-in">
+                        <select name="{{ status[0].lower() }}" class="select-in>
                             {% set value_list = [['custom', 'カスタム'], ['very_hard', 'とてもきつい'], ['hard', 'きつい'], ['soft', 'ゆるい'], ['very_soft', 'とてもゆるい']] %}
                             {% for value in value_list %}
                                 {% if status[1] == value[0] %}
-                                    <option value="{{ value }}" selected>{{ value[1] }}</option>
+                                    <option value="{{ value[0] }}" selected>{{ value[1] }}</option>
                                 {% else %}
-                                    <option value="{{ value }}">{{ value[1] }}</option>
+                                    <option value="{{ value[0] }}">{{ value[1] }}</option>
                                 {% endif %}
                             {% endfor %}
-                            <!--
-                            <option value="custom">カスタム</option>
-                            <option value="very_hard">とてもきつい</option>
-                            <option value="hard">きつい</option>
-                            <option value="soft">ゆるい</option>
-                            <option value="very_soft">とてもゆるい</option>
-                            -->
                         </select>
                         <br>
                         <input type="submit" value="OK">
