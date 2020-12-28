@@ -29,53 +29,45 @@
                         Block logs
                     </h2>
                 </div>
-                {% for i in logs %}
-                <div class="log-detail">
-                    {{ i }}
+                <div class="log-box">
+                    {% for i in logs %}
+                    <div class="log-detail">
+                        {{ i }}
+                    </div>
+                    {% endfor %}
                 </div>
-                {% endfor %}
             </div>
         </div>
         <div class="setting-page">
+            {% for status in status_all %}
             <div class="setting-detail">
                 <div class="title-center">
                     <h2>
-                        SQL
+                        {{ status[0] }}
                     </h2>
                 </div>
-            </div>
-            <div class="setting-detail">
-                <div class="title-center">
-                    <h2>
-                        RFI
-                    </h2>
+                <div class="setting-detail-dropdown">
+                    <form action="/api" method="post">
+                        <select name="{{ status[0].lower() }}" class="select-in>
+                            {% set value_list = [['custom', 'カスタム'], ['very_hard', 'とてもきつい'], ['hard', 'きつい'], ['soft', 'ゆるい'], ['very_soft', 'とてもゆるい']] %}
+                            {% for value in value_list %}
+                                {% if status[1] == value[0] %}
+                                    <option value="{{ value[0] }}" selected>{{ value[1] }}</option>
+                                {% else %}
+                                    <option value="{{ value[0] }}">{{ value[1] }}</option>
+                                {% endif %}
+                            {% endfor %}
+                        </select>
+                        <br>
+                        <input type="submit" value="OK">
+                    </form>
                 </div>
             </div>
-            <div class="setting-detail">
-                <div class="title-center">
-                    <h2>
-                        TRAVERSAL
-                    </h2>
-                </div>
-            </div>
-            <div class="setting-detail">
-                <div class="title-center">
-                    <h2>
-                        EVADE
-                    </h2>
-                </div>
-            </div>
-            <div class="setting-detail">
-                <div class="title-center">
-                    <h2>
-                        XSS
-                    </h2>
-                </div>
-            </div>
+            {% endfor %}
         </div>
     </div>
     <div class="footer">
-
+        <label>©️2020 system product</label>
     </div>
 </body>
 </html>
